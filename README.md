@@ -1,39 +1,28 @@
 # Random_Crypto_Wallet_Seed_Phrase_Generator
 A python program designed to generate a random 12-word seed phrase for the recovery of a crypto wallet.
 
-This Python program generates a random 12-word seed phrase that can be used for recovering a crypto wallet. 
-A seed phrase, also known as a mnemonic phrase, is a series of words that serves as a human-readable representation of a cryptographic key.
-It acts as a backup for your wallet, allowing you to regain access to your funds in case of loss, theft, or device failure.
+This Python code generates random seed phrases for your wallet. It reads a wordlist from a file called wordlist.txt and categorizes the words based on their lengths. It then selects random words from each category to create a random seed phrase.
 
-The program reads from a wordlist file (wordlist.txt) that contains a collection of words based on the BIP39 standard, 
-ensuring compatibility with popular crypto wallets. It categorizes the words into four groups based on their length: 4, 5, 6, and 7 characters.
+># Prerequisites
+Before running the code, make sure you have the following:
+* Python (version 3 or above) installed on your machine.
+* A file named wordlist.txt containing a list of words, with each word on a separate line.
 
-The program selects random words from each group to create a unique seed phrase. 
-To ensure that no word is repeated within the seed phrase, 
-the program keeps track of previously selected words for each word length category.
+# Usage
+* Place the wordlist.txt file in the same directory as the Python script.
+* Run the Python script.
 
-After generating the seed phrase, the program displays it on the console. 
-It is crucial to immediately store the seed phrase in a secure location, 
-such as a hardware wallet, offline storage, or a physical backup. 
-Safeguarding the seed phrase is vital to prevent unauthorized access to your funds.
+The script will generate a random seed phrase consisting of 12 words, with the words selected from different categories based on their lengths. The selected words will be displayed on the console.
 
-# Please note the following:
+>Note: Uncommenting the commented lines in the code will print additional information such as the number of words in each category.
 
-This program does not store or transmit any sensitive information. 
-The responsibility lies with the user to handle and store the seed phrase securely.
-To enhance security, it is recommended to run this program on an offline machine that is not connected to the internet.
-It is advisable to review and verify the wordlist used in the program, 
-ensuring it aligns with the BIP39 standard and includes appropriate and commonly accepted words.
-This program is provided as-is without any warranties. Use it at your own risk.
 
-# Requirements:
+Feel free to modify the code and adjust the word lengths or the number of words in the seed phrase according to your requirements.
+# Example Output:
 
-Python 3.x
+    > Random seed phrases for your wallet :
+    ['abacus', 'canoed', 'musings', 'scribing', 'flit', 'crank', 'refuel', 'tory', 'feral', 'vintage', 'caverns', 'altars']
 
-# Usage:
+Remember to keep your seed phrase secure as it is crucial for wallet recovery and should not be shared with anyone.
 
-> Ensure the wordlist file (wordlist.txt) is in the same directory as the Python program.
-> Run the program in Python.
-> The program will generate a random 12-word seed phrase and display it on the console.
-> Immediately record and securely store the seed phrase in multiple locations.
-> Avoid sharing the seed phrase with anyone and keep it offline to prevent unauthorized access to your wallet.
+>Disclaimer: This code is provided as a sample and should not be used for generating real seed phrases for wallets that hold valuable assets. It is recommended to use well-tested and trusted libraries or >tools specifically designed for seed phrase generation and wallet management.
